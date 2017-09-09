@@ -1,6 +1,10 @@
 #!/usr/bin/env ruby
 # coding: utf-8
 
+# sources:
+# https://www.tutorialspoint.com/ruby/ruby_loops.htm
+# The Ruby Way, 3rd edition
+
 # simplest:
 5.times do
   puts "Hello!"
