@@ -30,6 +30,10 @@ class AboutHashes < Neo::Koan
     # THINK ABOUT IT:
     #
     # Why might you want to use #fetch instead of #[] when accessing hash keys?
+    # Answer:
+    # fetch gives error if key is not defined
+    # fetch can also define a default value of its own
+    # a block can be executed which can return a default value
   end
 
   def test_changing_hashes
@@ -41,6 +45,7 @@ class AboutHashes < Neo::Koan
 
     # Bonus Question: Why was "expected" broken out into a variable
     # rather than used as a literal?
+    # guess: less typing
   end
 
   def test_hash_is_unordered
