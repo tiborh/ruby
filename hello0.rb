@@ -3,6 +3,6 @@
 require_relative "hello"
 include Hello
 
-hello
-hello("you")
-hello "tib"
+Hello.hello
+Hello.hello("you")
+Hello.hello "tib"
