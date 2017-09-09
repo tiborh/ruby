@@ -1,5 +1,5 @@
 # ruby
-Ruby examples of a starter.
+Ruby examples of a starter in the language.
 
 Useful resources:
 * https://www.ruby-lang.org/en/documentation/ (several approaches to the language)
