@@ -12,7 +12,7 @@ require 'logger'
 # INFO
 # DEBUG
 
-logfile = "logger.log"
+logfile = "logs/logger.log"
 # initialise:
 logger = Logger.new(logfile)
 logger.level = Logger::DEBUG
