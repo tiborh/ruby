@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+# source: The Ruby Way, 3rd edition
+
 def diverror
   n1 = 3
   n2 = 0
