@@ -1,0 +1,36 @@
+# Logfile created on 2017-09-10 22:32:14 +0200 by logger.rb/v1.2.7
+D, [2017-09-10T22:32:14.819058 #6646] DEBUG -- : Program start
+I, [2017-09-10T22:32:14.819221 #6646]  INFO -- : Hello logger!
+D, [2017-09-10T22:33:14.340805 #6652] DEBUG -- : Program start
+I, [2017-09-10T22:33:14.341085 #6652]  INFO -- : Hello logger!
+D, [2017-09-10T22:36:29.836981 #6686] DEBUG -- : Program start
+I, [2017-09-10T22:36:29.837257 #6686]  INFO -- : Hello logger!
+W, [2017-09-10T22:36:29.837359 #6686]  WARN -- : you are warned
+E, [2017-09-10T22:36:29.837446 #6686] ERROR -- : an error has occurred
+F, [2017-09-10T22:36:29.837568 #6686] FATAL -- : a fatal error has occurred
+D, [2017-09-10T22:39:36.114688 #6692] DEBUG -- : "Program start"
+I, [2017-09-10T22:39:36.114980 #6692]  INFO -- : "Hello logger!"
+W, [2017-09-10T22:39:36.115092 #6692]  WARN -- : "you are warned"
+E, [2017-09-10T22:39:36.115185 #6692] ERROR -- : "an error has occurred"
+F, [2017-09-10T22:39:36.115275 #6692] FATAL -- : "a fatal error has occurred"
+D, [2017-09-10T22:40:35.884694 #6695] DEBUG -- : "Program start"
+I, [2017-09-10T22:40:35.885041 #6695]  INFO -- : "Hello logger!"
+W, [2017-09-10T22:40:35.885156 #6695]  WARN -- : "you are warned"
+E, [2017-09-10T22:40:35.885249 #6695] ERROR -- : "an error has occurred"
+F, [2017-09-10T22:40:35.885339 #6695] FATAL -- : "a fatal error has occurred"
+I, [2017-09-10T22:40:35.885425 #6695]  INFO -- : "Bye logger!"
+D, [2017-09-10T22:41:34.941183 #6704] DEBUG -- : "Program starts"
+I, [2017-09-10T22:41:34.941477 #6704]  INFO -- : "Hello logger!"
+W, [2017-09-10T22:41:34.941582 #6704]  WARN -- : "you are warned"
+E, [2017-09-10T22:41:34.941673 #6704] ERROR -- : "an error has occurred"
+F, [2017-09-10T22:41:34.941822 #6704] FATAL -- : "a fatal error has occurred"
+I, [2017-09-10T22:41:34.941910 #6704]  INFO -- : "Bye logger!"
+D, [2017-09-10T22:41:34.942122 #6704] DEBUG -- : "Program ends"
+D, [2017-09-10T22:45:02.585342 #6721] DEBUG -- : "Program starts"
+I, [2017-09-10T22:45:02.585640 #6721]  INFO -- : "Hello logger!"
+W, [2017-09-10T22:45:02.585750 #6721]  WARN -- : "you are warned"
+E, [2017-09-10T22:45:02.585842 #6721] ERROR -- : "an error has occurred"
+F, [2017-09-10T22:45:02.585935 #6721] FATAL -- : "a fatal error has occurred"
+A, [2017-09-10T22:45:02.586027 #6721]   ANY -- : "an unknown error has occurred"
+I, [2017-09-10T22:45:02.586116 #6721]  INFO -- : "Bye logger!"
+D, [2017-09-10T22:45:02.586278 #6721] DEBUG -- : "Program ends"
