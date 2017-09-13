@@ -12,7 +12,16 @@ require 'logger'
 # INFO
 # DEBUG
 
-logfile = "logs/logger.log"
+logs_dir = "logs"
+
+if !File.exists?(logs_dir)
+  Dir.mkdir logs_dir
+end
+if !File.directory?(logs_dir)
+  abort "#{logs_dir} must be a directory"
+end
+
+logfile = logs_dir + "/logger.log"
 # initialise:
 logger = Logger.new(logfile)
 logger.level = Logger::DEBUG
