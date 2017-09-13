@@ -1,13 +1,18 @@
 # Object Oriented Programming in Ruby
 
+## next to explore:
+
+* https://www.devalot.com/articles/2008/09/ruby-singleton
+
 ## Some key facts:
 
-* Almost everything is an object. (I do not yet know what the exceptions are.)
+* Almost everything is an object.
+  * Exceptions: control structures and blocks
+  * blocks can be objectified with Proc object
 * Only single inheritance is supported
 * There are no abstract/template/interface classes
-* `initialize()` is the function used to create an instance
 
-### Load or Require?
+## Load or Require?
 
 * `load` to load the content of another file
 * `require` to load only if not already loaded
@@ -21,13 +26,18 @@
 
 * default values can be set
 
+### Significant Method Names
+
+* `initialize()` is the method used to create an instance
+* `method_missing` called when an undefined method is used
+
 ### Attrib Order, Mandatoriness, Optionalness
 
 * `def method_name(var1:val1, var2:val2)` type argument list can create a free order
   * if default value is not given, only the obligatoriness is set
 * variable length arguments are handled with splats: `def method(var1:,var2:,*optvars)`
 
-## Getters/Setters
+### Getters/Setters
 
 * in instances, they are handled with the following:
   * `attr_accessor :var1, :var2`
@@ -40,7 +50,7 @@ def self.var
 end
 ```
 
-## Accessibility
+### Accessibility
 
 Default is `public`.
 
@@ -72,13 +82,14 @@ end
 ```
 **Note:** There is an important difference from the way Java or C++ works. `private` in Ruby is similar to `protected` in Java/C++ in that subclasses have access to the method. In Ruby, there is no way to restrict access to a method from its subclasses like you can with `private` in Java. (See https://stackoverflow.com/questions/3534449/why-does-ruby-have-both-private-and-protected-methods)
 
-Original list in the above:
+#### Original list in the above:
 
 * `public` - can be accessed by any object (e.g. `Obj.new.public_method`)
 * `protected` - can only be accessed from within the object itself, as well as any subclasses
   protected methods can be called by any instance of the defining class or its subclasses.
 * `private` - same as protected, but the method doesn't exist in subclasses
   private methods can be called only from within the calling object (`self.xx`). You cannot access another instance's private methods directly.
+
 ## Inheritance
 
 * only single inheritance
