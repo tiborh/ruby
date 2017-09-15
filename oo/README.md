@@ -2,7 +2,7 @@
 
 ## next to explore:
 
-* https://www.devalot.com/articles/2008/09/ruby-singleton
+* http://ruby-doc.com/docs/ProgrammingRuby/html/tut_modules.html
 
 ## Some key facts:
 
@@ -98,6 +98,7 @@ end
 * modules (or mixins) can help
   * `include`: to instance methods
   * `extend`: to class methods
+  * `require`: makes them available in the class
 
 ### Singleton Classes and Methods
 
@@ -179,3 +180,4 @@ assert_true g1.respond_to?("name=")
 ## Sources
 
 * The Ruby Way, 3rd edition
+* https://www.devalot.com/articles/2008/09/ruby-singleton
