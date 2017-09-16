@@ -3,6 +3,9 @@
 ## next to explore:
 
 * http://ruby-doc.com/docs/ProgrammingRuby/html/tut_modules.html
+* collect method
+* closures
+* strings from book: for new info/features
 
 ## Some key facts:
 
