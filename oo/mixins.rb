@@ -1,34 +1,38 @@
 #!/usr/bin/env ruby
 
-abort "not yet operational!"
+#a complete mess but at least gives back something
 
 module Debug
-  class Type
-    def initialize(name)
-      @name = name
-    end
+  attr :next_id,:type,:id,:oid,:title
+  def to_s
+    @title
   end
-  
   def whoAmI?
-    "#{self.type.name} (\##{self.id}): #{self.to_s}"
+    "#{self.type} (iid:\##{self.id}/oid:\##{self.oid}): #{self.to_s}"
   end
 end
 
 # the module gives instance methods to the class
 class Phonograph
+  @@next_id = 0
   include Debug
-  def initialize(title,type_name="contemporary")
-    @title = title
-    @type = Type.new(type_name)
+  def initialize(title,type="contemporary")
+    @id,@oid = @@next_id,self.object_id
+    @@next_id = @@next_id.succ
+    @title,@type = title,type
   end
   # ...
 end
 
 class EightTrack
+  @@next_id = 0
   include Debug
-  def initialize(title,type_name="contemporary")
+  def initialize(title,type="contemporary")
+    @id = @@next_id
+    @oid = self.object_id
+    @@next_id = @@next_id.succ
     @title = title
-    @type = Type.new(type_name)
+    @type = type
   end
   # ...
 end

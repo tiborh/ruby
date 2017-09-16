@@ -98,7 +98,8 @@ end
 * modules (or mixins) can help
   * `include`: to instance methods
   * `extend`: to class methods
-  * `require`: makes them available in the class
+  * `require`: makes them available in the class (so needed to any of the above if the module is in a separate file)
+  * the `Comparable` module is also used as a mixin, and functions like an interface in Java: the comparison operator (`<=>`) needs to be implemented for comparisons to work. However, missing implementations do not give such clear error messages as Java. (e.g. `<': comparison of ____ with ____ failed (ArgumentError))
 
 ### Singleton Classes and Methods
 
