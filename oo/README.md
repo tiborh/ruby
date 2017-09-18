@@ -1,12 +1,5 @@
 # Object Oriented Programming in Ruby
 
-## next to explore:
-
-* http://ruby-doc.com/docs/ProgrammingRuby/html/tut_modules.html
-* collect method
-* closures
-* strings from book: for new info/features
-
 ## Some key facts:
 
 * Almost everything is an object.
@@ -185,3 +178,4 @@ assert_true g1.respond_to?("name=")
 
 * The Ruby Way, 3rd edition
 * https://www.devalot.com/articles/2008/09/ruby-singleton
+* http://ruby-doc.com/docs/ProgrammingRuby/html/tut_modules.html
