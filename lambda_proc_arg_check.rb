@@ -1,5 +1,8 @@
 #!/usr/bin/env ruby
 
+# source:
+# https://www.sitepoint.com/closures-ruby/
+
 l = lambda {|x, y| "#{x}#{y}"}
 
 puts "lambda called (l.call(\"foo\",\"bar\")): #{l.call("foo","bar")}"

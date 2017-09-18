@@ -4,6 +4,7 @@ Ruby examples of a starter in the language.
 ## next to explore:
 
 * map
+* enumerators
 * strings from book: for new info/features
 
 ## Closures

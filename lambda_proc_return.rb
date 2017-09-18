@@ -1,5 +1,8 @@
 #!/usr/bin/env ruby
 
+# source:
+# https://www.sitepoint.com/closures-ruby/
+
 def method_a
  lambda { return "return from lambda" }.call # this return is not printed
  return "method a returns"

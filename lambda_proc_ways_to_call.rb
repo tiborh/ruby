@@ -1,5 +1,8 @@
 #!/usr/bin/env ruby
 
+# source:
+# https://www.sitepoint.com/closures-ruby/
+
 p = proc {|x, y| "#{x}#{y}"}
 
 puts "ways to call:"
