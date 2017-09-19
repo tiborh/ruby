@@ -2,8 +2,8 @@
 
 # main source:
 # https://rossta.net/blog/what-is-enumerator.html
-# previous one to check:
-# https://rossta.net/blog/blog/ruby-enumerable.html
+# the whole series:
+# https://rossta.net/blog/series/enumerable.html
 
 # the reference suggested there:
 # http://ruby-doc.org/core-2.2.3/Enumerable.html
