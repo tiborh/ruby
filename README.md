@@ -3,7 +3,6 @@ Ruby examples of a starter in the language.
 
 ## next to explore:
 
-* map
 * enumerators
 * strings from book: for new info/features
 
@@ -62,4 +61,6 @@ The following can be used after the modifiers of the pervious table.
 * http://rdoc.sourceforge.net/doc/index.html (RDOC samples)
 * http://ruby-doc.org/core/classes/IO.html#method-c-new (for `File.open` modes)
 * https://www.sitepoint.com/closures-ruby/ (a simple intro to proc & lambda)
+* https://learn.onemonth.com/ruby-tutorial-map-vs-each-a692b63e1850 (a simple intro)
+* https://rossta.net/blog/what-is-enumerator.html
 * plus lots of references are included in the example files
