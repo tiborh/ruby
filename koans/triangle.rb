@@ -13,8 +13,31 @@
 # and
 #   about_triangle_project_2.rb
 #
+
+def side_check(a,b,c)
+  if a < b + c
+    if b < a + c
+      if c < a + b
+        return true
+      end
+    end
+  end
+  return false
+end
+
 def triangle(a, b, c)
-  # WRITE THIS CODE
+  if a <= 0 || b <= 0 || c <= 0
+    raise TriangleError.new("sides must be greater than zero")
+  elsif !side_check(a,b,c)
+    raise TriangleError.new("sides do not add up for a triangle")
+  elsif a == b && b == c
+    return :equilateral
+  elsif a == b || b == c || c == a
+    return :isosceles
+  else
+    return :scalene
+  end
+  
 end
 
 # Error class used in part 2.  No need to change this code.

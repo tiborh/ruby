@@ -33,4 +33,9 @@ begin
 rescue Test::Unit::AssertionFailedError
   puts "assert_block negative test has been rescued"
 end
-  
+
+# when an exception is asserted
+assert_raise(ZeroDivisionError) do
+  a = 1 / 0
+end
+puts "assertion for raised exception: correct"
