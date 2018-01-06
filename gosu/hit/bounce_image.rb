@@ -26,13 +26,13 @@ class WhackARuby < Gosu::Window
   end
 
   def update
-    if (Gosu.button_down? Gosu::KB_UP)
+    if (Gosu.button_down? Gosu::KB_UP or Gosu.button_down? Gosu::MS_WHEEL_UP) # wheel action does not work
       @vx += 1 if @vx >= 0
       @vx -= 1 if @vx <= 0
       @vy += 1 if @vy >= 0
       @vy -= 1 if @vy <= 0 
     end
-    if (Gosu.button_down? Gosu::KB_DOWN)
+    if (Gosu.button_down? Gosu::KB_DOWN or Gosu.button_down? Gosu::MS_WHEEL_DOWN) # wheel action does not work
       @vx -= 1 if @vx > 0
       @vx += 1 if @vx < 0
       @vy -= 1 if @vy > 0
