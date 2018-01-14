@@ -1,17 +1,24 @@
 #!/usr/bin/env ruby
 
 require 'gosu'
+require_relative 'zorder'
 require_relative 'player'
+require_relative 'star'
 
 class Tutorial < Gosu::Window
   def initialize
-    super 640, 480
+    super ZOrder::SPACEWIDTH, ZOrder::SPACEHEIGHT
     self.caption = "Tutorial Game"
 
     @background_image = Gosu::Image.new("media/space.png", :tileable => true)
 
     @player = Player.new
-    @player.warp(320, 240)
+    @player.warp(ZOrder::SPACEWIDTH/2, ZOrder::SPACEHEIGHT/2)
+
+    @star_anim = Gosu::Image.load_tiles("media/star.png", ZOrder::STARSIZE, ZOrder::STARSIZE)
+    @stars = Array.new
+
+    @font = Gosu::Font.new(ZOrder::FONTSIZE)
   end
   
   def update
@@ -28,11 +35,19 @@ class Tutorial < Gosu::Window
       @player.decelerate
     end
     @player.move
+
+    @player.collect_stars(@stars)
+
+    if rand(100) < ZOrder::STARANDLIMIT and @stars.size < ZOrder::STARSIZE
+      @stars.push(Star.new(@star_anim))
+    end
   end
   
   def draw
+    @background_image.draw(0, 0, ZOrder::BACKGROUND)
     @player.draw
-    @background_image.draw(0, 0, 0)
+    @stars.each { |star| star.draw }
+    @font.draw("Score: #{@player.score}", ZOrder::SCOREX, ZOrder::SCOREY, ZOrder::UI, 1.0, 1.0, Gosu::Color::YELLOW)
   end
 
   def button_down(id)
