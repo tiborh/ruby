@@ -22,6 +22,8 @@ class WhackARuby < Gosu::Window
     @broken_ruby_img = Gosu::Image.new('img/small_ruby_broken.png')
     @broken_counter = 0
     @broken_hit = -10
+    @hit_counter = 0
+    @miss_counter = 0
     @init_x = 200
     @init_y = 200
     @ruby_x = @init_x                # position parameters
@@ -107,10 +109,6 @@ class WhackARuby < Gosu::Window
     @vx *= -1 if (@ruby_x <= 0 + @half_width || @ruby_x >= @W - @half_width)
     @vy *= -1 if (@ruby_y <= 0 + @half_height || @ruby_y >= @H - @half_height)
 
-    if ((Gosu.button_down? Gosu::KB_ESCAPE or Gosu.button_down? Gosu::KB_Q))
-      game_closer()
-    end
-
     @visible -= 1
     @visible = @max_visibility if @visible < @init_visibility and rand < 0.01
     @visible = 1 if Gosu.button_down? Gosu::KB_V
@@ -124,15 +122,22 @@ class WhackARuby < Gosu::Window
     if (id == Gosu::MS_LEFT)
       if Gosu.distance(mouse_x, mouse_y, @ruby_x, @ruby_y) < 50 && @visible >= 0
         @hit = 1
+        @hit_counter += 1
         @score += @hit_incr
         # @highscore = @score if @score > @highscore
         @broken_counter = @broken_hit
       else 
         @hit = -1
+        @miss_counter += 1
         @score -= @miss_decr
       end
       print "hit: #{@hit}\n"
       print "score: #{@score} (high: #{@highscore})\n"
+    end
+    if id == Gosu::KB_ESCAPE  or id == Gosu::KB_Q
+      game_closer()
+    else
+      super
     end
   end
 
@@ -149,6 +154,7 @@ class WhackARuby < Gosu::Window
     @vy = @init_vy
     @visible = @init_visibility
     @hit = @hit_init
+    @hit_counter = @miss_counter = 0
     @score = 0
     print("Reset\n")
   end
@@ -161,6 +167,8 @@ class WhackARuby < Gosu::Window
       print("Highscore saved.\n")
     end
     print("Your final score:   #{@score}\n")
+    print("Number of hits:     #{@hit_counter}\n")
+    print("Number of misses:   #{@miss_counter}\n")
     print("Previous highscore: #{@highscore}\n")
     print("Game over.\n")
     close()
