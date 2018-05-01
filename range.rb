@@ -9,13 +9,19 @@ puts a
 
 puts "Each loop shows the diference"
 a.each do |a|
-  puts a
+  print a," "
 end
+puts ""
 
 puts "non-inclusive range"
 b = (0...5)
 puts b
 
 b.each do |b|
-  puts b
+  print b," "
 end
+puts ""
+
+puts "Range to array;"
+arr = *(1..10)
+print arr,"\n"
