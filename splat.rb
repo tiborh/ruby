@@ -69,3 +69,12 @@ print "\ta: ", a,"\n"
 a = *[1,2,3]
 puts "the unnecessary coercion"
 print "\ta: ", a,"\n"
+
+# a task
+def introduction(age, gender, *names)
+  outstr = "Meet"
+  names.each { |a_nam| outstr += " " + a_nam}
+  outstr += ", who is " + age.to_s + " and "
+  outstr += gender.to_s
+  return outstr
+end
