@@ -1,0 +1,9 @@
+---
+- !ruby/object:Ogre
+  name: Shrek
+  strength: 62
+  speed: 12
+- !ruby/object:Ogre
+  name: Fiona
+  strength: 66
+  speed: 37
