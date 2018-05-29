@@ -7,11 +7,20 @@ def start_summer
   raise Exception.new("overheated!")
 end
 
-begin
+def starter_function
   start_summer
+end
+
+def start_starter_function
+  starter_function
+end
+
+begin
+  start_starter_function
 rescue Exception => err
   puts "Inspect the exception: #{err.inspect}"
   puts "Print the exception error message: #{err}"
+  puts "Full backtrace:",err.backtrace
 end
 
 if __FILE__ == $0
